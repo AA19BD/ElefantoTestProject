@@ -27,7 +27,7 @@ class BookListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Book
-        fields = ['name', 'favorites', 'average_rating', 'author', 'genres']
+        fields = ['name', 'favorites', 'average_rating', 'author', 'genres', 'reviews']
 
     def create(self, validated_data):
         author = Author.objects.get(name=validated_data["author"]["name"])
