@@ -22,11 +22,25 @@ class ReviewSerializer(serializers.ModelSerializer):
 
 class BookListSerializer(serializers.ModelSerializer):
     genres = GenreSerializer(many=True)
-    author = AuthorSerializer()
+    author = AuthorSerializer(read_only=True)
 
     class Meta:
         model = Book
         fields = ['name', 'favorites', 'average_rating', 'author', 'genres']
+
+
+    # def create(self, validated_data):
+    #     # author_data = validated_data.pop('author')
+    #     # genres_data = validated_data.pop('genres')
+    #
+    #
+    #     book = Book.objects.create(**validated_data)
+    #     # Author.objects.create(name=author_data, **author_data)
+    #     # Genre.objects.create(name=genres_data, **genres_data)
+    #     # book.genres = Genre.objects.filter(name=genres_data[0]["name"])
+    #     # book.save()
+    #
+    #     return book
 
 
 class BookDetailSerializer(BookListSerializer):
@@ -36,7 +50,9 @@ class BookDetailSerializer(BookListSerializer):
         fields = BookListSerializer.Meta.fields + ['description', 'publish_date', 'reviews']
 
     # def create(self, validated_data):
-    #     return Review.objects.create(author=,rating=,review_text=)
-
+    #     reviews_data = validated_data.pop('reviews')
+    #     book = Book.objects.create(**validated_data)
+    #     Review.objects.create(author=reviews_data, **reviews_data)
+    #     return book
 
 

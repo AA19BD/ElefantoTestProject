@@ -4,3 +4,5 @@ djangorestframework-simplejwt
 Pillow
 psycopg2-binary
 django-filter
+drf-yasg
+python-dotenv

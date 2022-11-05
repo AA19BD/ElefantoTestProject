@@ -1,3 +1,4 @@
+from rest_framework.permissions import IsAuthenticated
 from rest_framework import viewsets
 from .models import Author, Book, Review, Genre
 from .serializers import BookListSerializer, BookDetailSerializer, AuthorSerializer, GenreSerializer, ReviewSerializer
@@ -11,6 +12,7 @@ class BookViewSet(viewsets.ModelViewSet):
     parser_classes = (FormParser, MultiPartParser, JSONParser)
     filter_backends = (filters.DjangoFilterBackend,)
     filterset_class = BookFilter
+    permission_classes = (IsAuthenticated,)
 
     def get_serializer_class(self):
         if self.action == 'list':
@@ -24,16 +26,18 @@ class GenreViewSet(viewsets.ModelViewSet):
     queryset = Genre.objects.all()
     parser_classes = (FormParser, MultiPartParser, JSONParser)
     serializer_class = GenreSerializer
+    permission_classes = (IsAuthenticated,)
 
 
 class AuthorViewSet(viewsets.ModelViewSet):
     queryset = Author.objects.all()
     parser_classes = (FormParser, MultiPartParser, JSONParser)
     serializer_class = AuthorSerializer
+    permission_classes = (IsAuthenticated,)
 
 
 class ReviewViewSet(viewsets.ModelViewSet):
     queryset = Review.objects.all()
     parser_classes = (FormParser, MultiPartParser, JSONParser)
     serializer_class = ReviewSerializer
-
+    permission_classes = (IsAuthenticated,)
