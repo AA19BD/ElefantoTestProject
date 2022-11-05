@@ -48,14 +48,14 @@ class Review(models.Model):
 
 
 class Book(models.Model):
-    name = models.CharField(max_length=250, null=True, blank=True)
+    name = models.CharField(max_length=250, blank=False)
     description = models.TextField(null=True, blank=True)
-    favorites = models.BooleanField(default=False, blank=True)
+    favorites = models.BooleanField(default=False)
     publish_date = models.DateField(auto_now_add=True)
     average_rating = models.FloatField(default=0, null=True, blank=True)
 
-    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='books', blank=True)
-    genres = models.ManyToManyField(Genre, related_name='books', blank=True)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='books')
+    genres = models.ManyToManyField(Genre, related_name='books')
     reviews = models.ManyToManyField(Review, related_name='books', blank=True)
 
 

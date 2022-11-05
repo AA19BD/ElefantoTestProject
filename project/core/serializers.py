@@ -22,26 +22,28 @@ class ReviewSerializer(serializers.ModelSerializer):
 
 class BookListSerializer(serializers.ModelSerializer):
     genres = GenreSerializer(many=True)
-    author = AuthorSerializer(read_only=True)
+    author = AuthorSerializer()
+    reviews = ReviewSerializer(many=True)
 
     class Meta:
         model = Book
         fields = ['name', 'favorites', 'average_rating', 'author', 'genres']
 
-
     def create(self, validated_data):
-        author_data = validated_data.pop('author')
-        genres_data = validated_data.pop('genres')
+        author = Author.objects.get(name=validated_data["author"]["name"])
+        genre_id = Genre.objects.get(name=validated_data["genres"][0]["name"]).id
+        review_id = Review.objects.create(author=validated_data["reviews"][0]["author"],
+                                          rating=validated_data["reviews"][0]["rating"],
+                                          review_text=validated_data["reviews"][0]["review_text"]).id
 
-        # genre = Genre.objects.bulk_create(genres_data)
-        book = Book.objects.create(**validated_data)
-        # Author.objects.create(name=author_data, **author_data)
-        # Genre.objects.create(name=genres_data, **genres_data)
-        # book.genres = Genre.objects.filter(name=genres_data[0]["name"])
-        # book.save()
+        book = Book.objects.create(name=validated_data["name"],
+                                   description=validated_data["description"],
+                                   author=author,
+                                   )
 
-
-        return super().create(**validated_data)
+        book.genres.set(objs=[genre_id])
+        book.reviews.set(objs=[review_id])
+        return book
 
 
 class BookDetailSerializer(BookListSerializer):
@@ -50,10 +52,5 @@ class BookDetailSerializer(BookListSerializer):
         model = Book
         fields = BookListSerializer.Meta.fields + ['description', 'publish_date', 'reviews']
 
-    # def create(self, validated_data):
-    #     reviews_data = validated_data.pop('reviews')
-    #     book = Book.objects.create(**validated_data)
-    #     Review.objects.create(author=reviews_data, **reviews_data)
-    #     return book
 
 

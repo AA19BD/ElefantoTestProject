@@ -44,12 +44,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{BASE_URL}}book/2",
+							"raw": "{{BASE_URL}}book/13",
 							"host": [
 								"{{BASE_URL}}book"
 							],
 							"path": [
-								"2"
+								"13"
 							]
 						}
 					},
@@ -91,6 +91,38 @@
 									"key": "publish_date_before",
 									"value": "2022-11-04"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateListofBooks",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"New Book2\",\n  \"favorites\": false,\n  \"average_rating\": 11,\n  \"author\": {\n    \"name\": \"Author3\",\n    \"age\": 73\n  },\n  \"genres\": [\n    {\n      \"name\": \"FANTASY\"\n    }\n  ],\n  \"description\": \"string\",\n  \"reviews\": [\n    {\n      \"author\": \"Angry man again\",\n      \"rating\": 4,\n      \"review_text\": \"good shit\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}book/",
+							"host": [
+								"{{BASE_URL}}book"
+							],
+							"path": [
+								""
 							]
 						}
 					},
