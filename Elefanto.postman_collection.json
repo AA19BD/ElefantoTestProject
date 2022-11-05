@@ -44,12 +44,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{BASE_URL}}book/13",
+							"raw": "{{BASE_URL}}book/3",
 							"host": [
 								"{{BASE_URL}}book"
 							],
 							"path": [
-								"13"
+								"3"
 							]
 						}
 					},
@@ -168,12 +168,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{BASE_URL}}genre/8",
+							"raw": "{{BASE_URL}}genre/1",
 							"host": [
 								"{{BASE_URL}}genre"
 							],
 							"path": [
-								"8"
+								"1"
 							]
 						}
 					},
@@ -448,12 +448,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{BASE_URL}}review/4",
+							"raw": "{{BASE_URL}}review/5",
 							"host": [
 								"{{BASE_URL}}review"
 							],
 							"path": [
-								"4"
+								"5"
 							]
 						}
 					},
@@ -536,12 +536,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{BASE_URL}}review/6/",
+							"raw": "{{BASE_URL}}review/5/",
 							"host": [
 								"{{BASE_URL}}review"
 							],
 							"path": [
-								"6",
+								"5",
 								""
 							]
 						}
