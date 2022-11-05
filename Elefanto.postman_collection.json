@@ -1,0 +1,563 @@
+{
+	"info": {
+		"_postman_id": "184c39e0-6698-4619-8692-2b0977a9138e",
+		"name": "Elefanto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15289761"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "ListOfBooks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}book/",
+							"host": [
+								"{{BASE_URL}}book"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BookListById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}book/2",
+							"host": [
+								"{{BASE_URL}}book"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FilterListOfBooks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}book/?genres=HORROR&author=Author4&publish_date_after=2022-11-03&publish_date_before=2022-11-04",
+							"host": [
+								"{{BASE_URL}}book"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "genres",
+									"value": "HORROR"
+								},
+								{
+									"key": "author",
+									"value": "Author4"
+								},
+								{
+									"key": "publish_date_after",
+									"value": "2022-11-03"
+								},
+								{
+									"key": "publish_date_before",
+									"value": "2022-11-04"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Genres",
+			"item": [
+				{
+					"name": "ListOfGenres",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}genre/",
+							"host": [
+								"{{BASE_URL}}genre"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GenreListById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}genre/8",
+							"host": [
+								"{{BASE_URL}}genre"
+							],
+							"path": [
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateGenre",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"FANTASY\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}genre/",
+							"host": [
+								"{{BASE_URL}}genre"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateGenreById",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"ADVENTURES\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}genre/8/",
+							"host": [
+								"{{BASE_URL}}genre"
+							],
+							"path": [
+								"8",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteGenreById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}genre/8/",
+							"host": [
+								"{{BASE_URL}}genre"
+							],
+							"path": [
+								"8",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authors",
+			"item": [
+				{
+					"name": "ListOfAuthors",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}author/",
+							"host": [
+								"{{BASE_URL}}author"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AuthorListById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}author/4",
+							"host": [
+								"{{BASE_URL}}author"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAuthorById",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Author1UpdatedAgain\",\n  \"age\": 23\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}author/1/",
+							"host": [
+								"{{BASE_URL}}author"
+							],
+							"path": [
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAuthorById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}author/2/",
+							"host": [
+								"{{BASE_URL}}author"
+							],
+							"path": [
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAuthor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"AuthorNew\",\n  \"age\":69\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}author/",
+							"host": [
+								"{{BASE_URL}}author"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "ListOfReviews",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}review/",
+							"host": [
+								"{{BASE_URL}}review"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReviewListById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}review/4",
+							"host": [
+								"{{BASE_URL}}review"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateReviewById",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"author\": \"Author4UpdatedAgain\",\n    \"rating\": 3,\n    \"review_text\": \"--\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}review/4/",
+							"host": [
+								"{{BASE_URL}}review"
+							],
+							"path": [
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateReviewById",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"author\": \"Author6\",\n    \"rating\": 3,\n    \"review_text\": \"--\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}review/",
+							"host": [
+								"{{BASE_URL}}review"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteReviewById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjYyNTQ2LCJpYXQiOjE2Njc2MDI2MDYsImp0aSI6IjA1MmVhZTM2OTlmMjQwYThhNDUzNmZmMzM1MmE0M2VkIiwidXNlcl9pZCI6MX0.VwEmSdj_zktPlHEm6OmRfboOQZ_8NPrJezpXPXPQBxc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}review/6/",
+							"host": [
+								"{{BASE_URL}}review"
+							],
+							"path": [
+								"6",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3NjAyMzc5LCJpYXQiOjE2Njc2MDIwNzksImp0aSI6IjQ3N2ZjZmFlZmM2ZDRjNWQ5ZGIwMGNjOTVjYjlmNDJiIiwidXNlcl9pZCI6MX0.0XUGIWJOz-w1l6BnDQ4365h57DF5-hjqSnMtCkUGUkM",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}auth/api/token/",
+					"host": [
+						"{{BASE_URL}}auth"
+					],
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

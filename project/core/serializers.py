@@ -30,17 +30,18 @@ class BookListSerializer(serializers.ModelSerializer):
 
 
     def create(self, validated_data):
-        # author_data = validated_data.pop('author')
-        # genres_data = validated_data.pop('genres')
+        author_data = validated_data.pop('author')
+        genres_data = validated_data.pop('genres')
 
-
+        # genre = Genre.objects.bulk_create(genres_data)
         book = Book.objects.create(**validated_data)
         # Author.objects.create(name=author_data, **author_data)
         # Genre.objects.create(name=genres_data, **genres_data)
         # book.genres = Genre.objects.filter(name=genres_data[0]["name"])
         # book.save()
 
-        return book
+
+        return super().create(**validated_data)
 
 
 class BookDetailSerializer(BookListSerializer):
