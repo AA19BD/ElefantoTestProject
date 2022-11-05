@@ -10,4 +10,5 @@ project/project/__pycache__
 project/core/__pycache__
 project/auth_/__pycache__
 envs/
+project/__init__.py
 
